@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja stránka - Dark Vercel štýl</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* GLOBAL */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000000;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #111111;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      color: #ffffff;
+      transition: color 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #7f5af0; /* Vercel purple accent */
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #bbbbbb;
+    }
+
+    /* BLOG SECTION */
+    .blog {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .blog h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .post {
+      background: #111111;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(127,90,240,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(127,90,240,0.4);
+    }
+
+    .post h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .post p.date {
+      font-size: 0.9rem;
+      color: #888888;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      color: #dddddd;
+    }
+
+    .post a {
+      color: #7f5af0;
+      font-weight: 600;
+    }
+
+    .post a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111111;
+      color: #bbbbbb;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 600px){
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MojaStránka</div>
+  <ul>
+    <li><a href="#">Domov</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#">O mne</a></li>
+    <li><a href="#">Kontakt</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Vitaj na mojej stránke</h1>
+  <p>Dark mode minimalistický blog vo Vercel štýle</p>
+</header>
+
+<section id="blog" class="blog">
+  <h2>Blog</h2>
+  <div class="posts">
+    <div class="post">
+      <h3>Môj prvý blog post</h3>
+      <p class="date">9.2.2026</p>
+      <p>Toto je môj prvý článok. Minimalistický a čistý dark dizajn! <a href="#">Čítať viac</a></p>
+    </div>
+    <div class="post">
+      <h3>Druhý blog post</h3>
+      <p class="date">10.2.2026</p>
+      <p>Dark karty blogu so shadow efektom a fialovým hoverom. <a href="#">Čítať viac</a></p>
+    </div>
+    <div class="post">
+      <h3>Tretí blog post</h3>
+      <p class="date">11.2.2026</p>
+      <p>Elegantné a moderné zobrazenie článkov s fialovými linkami. <a href="#">Čítať viac</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 MojaStránka | Všetky práva vyhradené
+</footer>
+
+</body>
+</html>
